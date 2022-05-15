@@ -1,4 +1,4 @@
-let userCreditCard = [
+export let userCreditCard = [
 
     //user_id	credit_card_number
 

@@ -6,14 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- Archivos CSS-->
     <link rel="stylesheet" href="css/configuracion.css"> 
+    <link rel="stylesheet" href="css/escritorio.css">
 
 </head>
 <body>
     
+    <!--
+    <form action="">
+
+        <h2>Formulario</h2>
+
+        <label for="">
+            username</label>
+        <input type="text">
+
+        <label for="">
+            password
+            <input type="password">
+        </label>
+
+        <div>ENTRAR</div>
+
+    </form>
+-->
+    <div class="login-background">
+        
+        
+        <section class="formulario-login">
+
+            <img class="formulario_img" src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-orange.png">
+            <h1 class="formulario_titulo">Welcome</h1>    
+            <span class="formulario_sub">Login</span>
+
+            <form class="formulario">
+                <label class="formulario__label">
+                    Usuario/Email
+                    <input type="email"  class="formulario" placeholder="">
+                </label>
+                <label class="formulario__label">
+                   <!-- <img class="formulario_img1" src="https://cdn-icons-png.flaticon.com/512/345/345535.png">-->
+                    Password
+                    <input type="password" placeholder="">
+                </label>
+                <button>
+                    SIGN IN
+                </button>
+              
+            </form>
+
+        </section>
+    </div>
+
+    
     <!-- Archivos de programación -->
-    <script src="./js/Main.js"></script>
+    <script src="./js/Main.js" type="module"></script>
 
 </body>
 </html>

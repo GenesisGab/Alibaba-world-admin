@@ -1,4 +1,4 @@
-let user = [
+export let usr = [
     //user_id	username	password	full_name	address	email	phone
 
     [100,	"anna0",	    "white00",      "Anna Addison",	    "1325 Candy Rd, San Francisco, CA 96123",	"anna.addison@yahoo.com",	3841019535],
