@@ -2,11 +2,11 @@
 export var section_administrador = document.getElementById("section-administrador");
 export var section_login = document.getElementById("section-login");
 
-/* LIBRERÍA DEL USUARIO Y ADMINISTRADOR */
+/* LIBRERIAS BD USER Y ADMINISTRADOR*/
 import {user} from "./user.js";
 import { administrador } from "./administrador.js";
-import { userCreditCard } from "./user_has_creditcard.js";
 
+//import { UserCreditcard } from "./user_has_creditcard.js";
 
 export function revisarusuario(usuario, password){
     
@@ -19,7 +19,7 @@ export function revisarusuario(usuario, password){
                     
           if(password===user[i][2]){
             
-            alert('** Acceso con usuario valido **');
+            alert('* Acceso con usuario valido *');
 
             //Despliegue de datos por consola del usuario
             console.log("ID del Usuario..........: ",user[i][0]);
@@ -29,13 +29,16 @@ export function revisarusuario(usuario, password){
             console.log("Dirección...............: ",user[i][4]);
             console.log("email...................: ",user[i][5]);
             console.log("Número de Telefono......: ",user[i][6]);
-            console.log("Tarjeta de credito: ",userCreditCard[i][1]);
+
+            //console.log("Tarjeta de credito: ",UserCreditcard[i][1]);
 
             i=user.length;
 
             administrador();
             
-          }
+          }else{
+            console.log("Contraseña no valida");
+         }
                       
         } else if(usuario===user[i][5]){  //Valida si el email ingresado se encuentra en la BD
 
@@ -51,16 +54,14 @@ export function revisarusuario(usuario, password){
                 console.log("Dirección...............: ",user[i][4]);
                 console.log("email...................: ",user[i][5]);
                 console.log("Número de Telefono......: ",user[i][6]);
-                console.log("Tarjeta de Credito......: ",userCreditCard[i][1]);
+                
+                //console.log("Tarjeta de Credito......: ",UserCreditcard[i][1]);
 
                 i=user.length;
                 
                 administrador();
             }
 
-        }else{
-            alert("Los datos ingresados no son validos");
-            i=user.length;
         } 
                
     }
