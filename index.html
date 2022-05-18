@@ -11,62 +11,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Archivos CSS-->
-    <link rel="stylesheet" href="css/configuracion.css"> 
-    <link rel="stylesheet" href="css/escritorio.css">
+    <!-- Archivos CSS -->
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/administrador.css">
+    <link rel="stylesheet" href="./css/configuracion.css"> <!-- Prioridad -->
 
 </head>
 <body>
+
     
-    <!--
-    <form action="">
-
-        <h2>Formulario</h2>
-
-        <label for="">
-            username</label>
-        <input type="text">
-
-        <label for="">
-            password
-            <input type="password">
-        </label>
-
-        <div>ENTRAR</div>
-
-    </form>
--->
-    <div class="login-background">
+    <section class="section-login activar-flex" id="section-login">
         
-        
-        <section class="formulario-login">
+        <img class="formulario_img2" src="https://www.logo.wine/a/logo/Alibaba_Group/Alibaba_Group-Logo.wine.svg">
+
+         <!-- CREACION DEL FORMULARIO -->
+        <form class="form-login" action="" id="login" autocomplete="off">
 
             <img class="formulario_img" src="https://icones.pro/wp-content/uploads/2021/02/icone-utilisateur-orange.png">
-            <h1 class="formulario_titulo">Welcome</h1>    
+
+            <h2>Welcome</h2>
+
             <span class="formulario_sub">Login</span>
 
-            <form class="formulario">
-                <label class="formulario__label">
-                    Usuario/Email
-                    <input type="email"  class="formulario" placeholder="">
-                </label>
-                <label class="formulario__label">
-                   <!-- <img class="formulario_img1" src="https://cdn-icons-png.flaticon.com/512/345/345535.png">-->
-                    Password
-                    <input type="password" placeholder="">
-                </label>
-                <button>
-                    SIGN IN
-                </button>
-              
-            </form>
+            <label class="formulario__label" for="">
+                Usuario/Email
+                <input type="texto" id="username">
+            </label>
 
-        </section>
-    </div>
+            <label class="formulario__label" for="">
+                Password
+                <input type="password" id="password">
+            </label>
 
+            <button>SIG IN</button>
+
+        </form>
+
+    </section>
     
+    
+
+    <!--DESPLIEGUE DEL MENU-->
+    <section class="section-administrador" id="section-administrador">
+        <nav>Alibaba</nav>
+        <img class="administrador_img" src="https://www.logo.wine/a/logo/Alibaba_Group/Alibaba_Group-Logo.wine.svg">
+        <h1>Bienvenid@</h1>
+        
+    </section>
+
     <!-- Archivos de programación -->
     <script src="./js/Main.js" type="module"></script>
-
 </body>
 </html>

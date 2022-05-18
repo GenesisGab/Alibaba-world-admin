@@ -2,10 +2,19 @@
  * INICIO DE SESIÓN
  *********************/
 
-import { revisarusuarios } from "./login.js";
+/* Librería de los programas */
+import {revisarusuario} from "./login.js"
 
+function recuperar_datos(e) {
+    e.preventDefault(); //<-- Evita que el formulario se recargue
 
-let usuario = prompt("Ingrese usuario o email: ",0);
-let password = prompt("Ingrese su contraseña: ",0);
+    var username = document.querySelector("#username").value;
+    var password = document.querySelector("#password").value;
 
-revisarusuarios(usuario,password);
+    //Programa login
+    revisarusuario(username,password);
+}
+
+// Acción del boton
+var bt_entrar = document.querySelector("#login");//<-- Instancia del formulario
+bt_entrar.addEventListener('submit',recuperar_datos); //<-- Evento

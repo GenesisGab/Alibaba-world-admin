@@ -1,64 +1,68 @@
-//IMPORTAR BASE DE DATOS DE USUARIO (user.js)
-import { usr } from "./user.js";
+/* LIBRERIA DE COMPPONENTES */
+export var section_administrador = document.getElementById("section-administrador");
+export var section_login = document.getElementById("section-login");
+
+/* LIBRERÍA DEL USUARIO Y ADMINISTRADOR */
+import {user} from "./user.js";
+import { administrador } from "./administrador.js";
 import { userCreditCard } from "./user_has_creditcard.js";
 
-export function revisarusuarios(usuario,password){
-    console.log(usuario,password);
 
-    let userid=0;
+export function revisarusuario(usuario, password){
+    
+    /* Con un for se recorre la Base de Datos de Usuarios para validar las
+    credenciales ingresadas */
+    
+    for (let i=0;i<user.length;i++){ //Valida si el user ingresado se encuentra en la BD
 
-    for (let i=0;i<usr.length;i++){
+        if(usuario===user[i][1]){
+                    
+          if(password===user[i][2]){
+            
+            alert('** Acceso con usuario valido **');
 
-        if(usuario==usr[i][1]){
-            console.log("Usuario Valido");
-
-            if(password==usr[i][2]){
-                console.log("User_id:   ",usr[i][0]);
-
-                userid=usr[i][0];
-
-                console.log("Username:  ",usr[i][1]);
-                console.log("Password:  ",usr[i][2]);
-                console.log("Full name: ",usr[i][3]);
-                console.log("Address:   ",usr[i][4]);
-                console.log("Email:     ",usr[i][5]);
-                console.log("Phone:     ",usr[i][6]);
-               //console.log("Tarjeta de credito: ",userCreditCard[i][1]);
-
-
-                //Buscar el numero de tarjeta de credito del usuario
-                for (let j=0;j<userCreditCard.length;j++){
-                    if(userid==userCreditCard[j][0]){
-                        console.log(userCreditCard[j][1]);
-                    }
-                }
-
-                i=usr.length;
-
-            }else{
-                console.log("Contraseña no valida");
-            }
-
-        }else if(usuario==usr[i][5]){
-
-            console.log("Acceso con email");
-
-            console.log("Username:  ",usr[i][1]);
-            console.log("Password:  ",usr[i][2]);
-            console.log("Full name: ",usr[i][3]);
-            console.log("Address:   ",usr[i][4]);
-            console.log("Email:     ",usr[i][5]);
-            console.log("Phone:     ",usr[i][6]);
+            //Despliegue de datos por consola del usuario
+            console.log("ID del Usuario..........: ",user[i][0]);
+            console.log("Nombre del Usuario......: ",user[i][1]);
+            console.log("Password o Clave........: ",user[i][2]);
+            console.log("Nombre completo.........: ",user[i][3]);
+            console.log("Dirección...............: ",user[i][4]);
+            console.log("email...................: ",user[i][5]);
+            console.log("Número de Telefono......: ",user[i][6]);
             console.log("Tarjeta de credito: ",userCreditCard[i][1]);
 
-            i=usr.length;
+            i=user.length;
+
+            administrador();
+            
+          }
+                      
+        } else if(usuario===user[i][5]){  //Valida si el email ingresado se encuentra en la BD
+
+            if(password===user[i][2]){
+                
+                alert("* Acceso con email valido *"); //Msj que indica al usuario que su correo es valido
+
+                //Despliegue de datos por consula del usuario
+                console.log("ID del Usuario:.........: ",user[i][0]);
+                console.log("Nombre del Usuario:.....: ",user[i][1]);
+                console.log("Password o Clave:.......: ",user[i][2]);
+                console.log("Nombre completo::::.....: ",user[i][3]);
+                console.log("Dirección...............: ",user[i][4]);
+                console.log("email...................: ",user[i][5]);
+                console.log("Número de Telefono......: ",user[i][6]);
+                console.log("Tarjeta de Credito......: ",userCreditCard[i][1]);
+
+                i=user.length;
+                
+                administrador();
+            }
 
         }else{
-            console.log("Acceso denegado");
-        }
-
+            alert("Los datos ingresados no son validos");
+            i=user.length;
+        } 
+               
     }
-
-
+ 
 }
-

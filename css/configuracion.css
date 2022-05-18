@@ -1,43 +1,43 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 10px;
     font-family: 'League Spartan', sans-serif;
 }
 
 :root{
 
-        /* variables de color*/
-        --azul1: #345FB4;
-        --azul2: #6789CA;
-        --azul3: #6688CA;
-        --gris1: #313131;
-        --gris2: #777777;
-        --gris3: #A5A5A5;
-        --gris4: #CACACA;
-        --gris5: #F5F6FC;
-      
+    /* variables de color*/
+    --azul1: #345FB4;
+    --azul2: #6789CA;
+    --azul3: #6688CA;
+    --gris1: #313131;
+    --gris2: #777777;
+    --gris3: #A5A5A5;
+    --gris4: #CACACA;
+    --gris5: #F5F6FC;
+  
 
-    /* tamaños de fuente */
-    --size-h1: 3.4rem;
-    --size-h2: 2.6rem;
-    --size-h3: 2rem;
-    --size-parrafo: 1.6rem;
+/* tamaños de fuente */
+--size-h1: 3.4rem;
+--size-h2: 2.6rem;
+--size-h3: 2rem;
+--size-parrafo: 1.6rem;
 }
 
-/**************/
-/*ESTRCUTURA DE LAS SECCIONES*/
-Section{
-    max-width: 37.5rem;
-    height: auto;
-    margin: auto;
-/*    padding: 5.6rem 3rem;*/
-    padding: 5rem 3rem;
-    
+
+/* Activador de elementos*/
+.activar-block {
+    display: block;
+}
+.activar-flex {
     display: flex;
-    flex-direction: column;
+}
+
+.desactivar {
+    display: none;
 }
